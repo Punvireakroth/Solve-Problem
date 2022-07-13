@@ -26,14 +26,28 @@
 
 
 # --------------------------------------------------------
-def sortList(arr):
-    for i in range(len(arr)):
-        for j in range((len(arr) - i) - 1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-arr = [1, 5, 2, 9, 7, 8, 0]
+# def sortList(arr):
+#     for i in range(len(arr)):
+#         for j in range((len(arr) - i) - 1):
+#             if arr[j] > arr[j+1]:
+#                 arr[j], arr[j+1] = arr[j+1], arr[j]
+# arr = [1, 5, 2, 9, 7, 8, 0]
 
-sortList(arr)
+# sortList(arr)
 
-for i in range(len(arr)):
-    print("%d" % arr[i], end=" ")
+# for i in range(len(arr)):
+#     print("%d" % arr[i], end=" ")
+
+#----------------------------------------------------------
+
+list = [1,3,5,3,6,8,23,64,9,10]
+new_list = []
+while list:
+    maximum = list[0]
+    for i in list:
+        if maximum < i: 
+           maximum = i
+
+    new_list.append(maximum)
+    list.remove(maximum)
+print(new_list)
