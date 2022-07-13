@@ -40,14 +40,37 @@
 
 #----------------------------------------------------------
 
-list = [1,3,5,3,6,8,23,64,9,10]
-new_list = []
-while list:
-    maximum = list[0]
-    for i in list:
-        if maximum < i: 
-           maximum = i
+# list = [1,3,5,3,6,8,23,64,9,10]
+# new_list = []
+# while list:
+#     maximum = list[0]
+#     for i in list:
+#         if maximum < i: 
+#            maximum = i
 
-    new_list.append(maximum)
-    list.remove(maximum)
-print(new_list)
+#     new_list.append(maximum)
+#     list.remove(maximum)
+# print(new_list)
+
+#----------------------------------------------------------
+
+# Gien a array arr[] of n element, write a Python function to seach a given element x in arr[]
+what_user_want = int(input("What number so wanna search? "))
+print('----------------------------------------')
+
+def search(number):
+    arr = [1,3,5,3,6,8,23,64,9,10]
+    for i in arr:
+        if(i == what_user_want):
+            flag = True
+    if flag:
+        print(f"Your number is at index {arr.index(what_user_want)}")
+        return True
+    else:
+        print(f"Your number is not on the list")
+        return False
+
+
+
+answer = search(what_user_want)
+print(answer)
