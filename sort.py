@@ -70,7 +70,5 @@ def search(number):
         print(f"Your number is not on the list")
         return False
 
-
-
 answer = search(what_user_want)
 print(answer)
